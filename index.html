@@ -1,71 +1,141 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Killzombies-game by raviprajapat725</title>
-  </head>
-
-  <body>
-    <a id="forkme_banner" href="https://github.com/raviprajapat725/killzombies-game">View on GitHub</a>
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Killzombies-game</h1>
-            <h2>HTML 5 game using enchant.js .</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/raviprajapat725/killzombies-game/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/raviprajapat725/killzombies-game/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h1>
-<a name="welcome" class="anchor" href="#welcome"><span class="octicon octicon-link"></span></a>Welcome</h1>
-
-<p><strong>Testing application</strong></p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/raviprajapat725">raviprajapat725</a> can be found on <a href="https://github.com/raviprajapat725/killzombies-game">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Killzombies-Game</title>
+    <!-- Script -->
+    <script src="Script/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Script/enchant.js" type="text/javascript"></script>
+    <script src="Script/plugins/nineleap.enchant.js" type="text/javascript"></script>
+    <script src="Script/plugins/ui.enchant.js" type="text/javascript"></script>
+    <script src="Script/game.js" type="text/javascript"></script>
+    <!--End Script-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    a#forkme_banner
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 138px;
+        height: 138px;
+        display: block;
+        background: transparent url(images/fork-sprite.png) 0 0 no-repeat;
+        text-indent: -9000px;
+        z-index: 99999;
+    }
+    div.footer
+    {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    div.game-container
+    {
+        width: 800px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+    }
+    div#divrestart, div#divresume
+    {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 800px;
+        height: 400px;
+    }
+    .game-msg
+    {
+        width: 180px;
+        margin: 0 auto;
+        padding-top: 180px;
+        text-align: center;
+    }
+    .game-msg p
+    {
+        background-color: red;
+        padding: 5px;
+        border-radius: 5px;
+        color: #fff;
+    }
+    .game-msg p a,  .game-opt p a
+    {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    .game-opt
+    {
+        width: 180px;
+        margin: 0 auto;
+        padding-top: 180px;
+        text-align: center;
+    }
+</style>
+<body>
+    <a id="forkme_banner" href="https://github.com/raviprajapat725/killzombies-game">View
+        on GitHub</a>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-weight: bold;">Killzombies-game</a>
+            </div>
+            <div class="navbar-collapse collapse" style="height: 1px;">
+                <div class="nav navbar-nav">
+                    <span class="label label-primary" style="position: absolute; top: 14px; font-size: 14px;">
+                        HTML 5 game using enchant.js .</span>
+                </div>
+                <div class="nav navbar-nav navbar-right" style="padding-top: 10px;">
+                    <a href="https://github.com/raviprajapat725/killzombies-game/zipball/master" class="label label-danger"
+                        style="font-size: 14px;">download .ZIP</a> <a href="https://github.com/raviprajapat725/killzombies-game/tarball/master"
+                            class="label label-danger" style="font-size: 14px;">download .Taz</a>
+                </div>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
     </div>
-
-    
-  </body>
+    <div class="container" style="margin-top: 52px;">
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="game-container">
+                <div id="enchant-stage">
+                </div>
+                <div id="divrestart" class="game-over-cover">
+                    <div class="game-msg" style="padding-top: 255px;">
+                        <p>
+                            <a id="restart" href="#">Restart</a>
+                        </p>
+                    </div>
+                </div>
+                <div id="divresume" class="game-over-cover">
+                    <div class="game-opt">
+                        <p>
+                            <a id="alevel" style="color: black; font-weight: bold;">Level-1</a> <a id="resume"
+                                href="#" style="background-color: red; border-radius: 5px;">Resume</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                this project by <a href="https://github.com/raviprajapat725" class="label label-info">
+                    Ravi Prajapat</a> can be found on <a href="https://github.com/raviprajapat725/killzombies-game"
+                        class="label label-info">GitHub</a></p>
+        </div>
+    </div>
+</body>
+<script>
+    enchant();
+    gameLoad();
+</script>
 </html>

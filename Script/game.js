@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 gameLoad = function () {
     $levelText = $("#alevel");
-    var height = $(window).height(), width = $(window).width();
+    var height =400, width = 800;
     var game = new Core(width, height);
     game.fps = 15;
     game.preload("chara.png", "bg.png", "monsters.png", "man.png", "icon0.png", "gunshot.wav", "stuck.wav", "blast.gif");
