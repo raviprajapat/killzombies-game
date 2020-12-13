@@ -264,13 +264,14 @@ gameLoad = function () {
 
 
     gettiles = function (size) {
+        var tileIndex=Math.floor(Math.random() * 7);
         var widthtiles = parseInt((game.width / size)) + (game.width % size == 0 ? 0 : 1);
         var heighttiles = parseInt((game.height / size)) + (game.height % size == 0 ? 0 : 1);
         var tiles = [];
         for (var row = 0; row < heighttiles; row++) {
             var temp = [];
             for (var col = 0; col < widthtiles; col++) {
-                temp.push(0);
+                temp.push(tileIndex);
             }
             tiles.push(temp);
         }
